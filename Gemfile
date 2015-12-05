@@ -14,6 +14,8 @@ gem 'haml-rails'
 gem 'puma'
 gem 'pundit'
 gem 'simple_form'
+gem 'dotenv', require: false
+gem 'sidekiq'
 
 group :development do
   gem 'better_errors'

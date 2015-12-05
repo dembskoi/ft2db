@@ -1,0 +1,46 @@
+ROOT = "/home/seo/apps/ft2db/current"
+
+Eye.config do
+  logger "/home/seo/.eye/eye.log"
+
+  mail host: "montpan.com", port: 25, from_mail: 'eye@montpan.com', domain: 'montpan.com'
+
+  contact_group :panic do
+    contact :adembskiy, :mail, 'dembskoi@gmail.com'
+    contact :artur, :mail, 'arentij@gmail.com'
+  end
+end
+
+Eye.application "ft2db" do
+  notify :panic, :warn
+  working_dir ROOT
+
+  env({'RAILS_ENV' => 'production'})
+  triggers :flapping, times: 10, within: 1.minute
+
+  process :puma do
+    daemonize true
+    pid_file "tmp/pids/puma.pid"
+    stdall "log/puma.log"
+
+    start_command "rbenv exec bundle exec puma -C config/puma.rb"
+    stop_signals [:TERM, 5.seconds, :KILL]
+
+    restart_command "kill -USR1 {PID}"
+
+    restart_grace 10.seconds
+
+    monitor_children do
+      checks :cpu, every: 40, below: 100, times: 3, times: 3
+      checks :memory, every: 40, below: 500.megabytes, times: 3
+    end
+  end
+
+  process :sidekiq do
+    pid_file "tmp/pids/sidekiq.pid"
+    stdall "log/sidekiq.log"
+    daemonize true
+    start_command "rbenv exec bundle exec sidekiq"
+    stop_signals [:USR1, 2.minutes, :TERM, 5.seconds, :KILL]
+  end
+end
