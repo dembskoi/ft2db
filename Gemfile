@@ -20,7 +20,7 @@ gem 'sidekiq'
 
 group :development do
   gem 'better_errors'
-  gem 'capistrano-rails', '~> 1.1'
+  gem 'capistrano-rails', '~> 1.1.3'
   gem 'capistrano-rbenv', '~> 2.0'
   gem 'html2haml'
   gem 'quiet_assets'
