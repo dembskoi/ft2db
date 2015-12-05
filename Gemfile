@@ -17,6 +17,7 @@ gem 'pundit'
 gem 'simple_form'
 gem 'dotenv', require: false
 gem 'sidekiq'
+gem 'airbrake', '~> 4.3.0'
 
 group :development do
   gem 'better_errors'
