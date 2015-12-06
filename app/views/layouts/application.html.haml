@@ -10,6 +10,11 @@
   %body
     %header
       = render 'layouts/navigation'
-    %main{:role => "main"}
+    %main{ role: 'main' }
       = render 'layouts/messages'
       = yield
+
+  .container
+    %hr
+    %footer
+      %p &copy; Ft2db 2015
