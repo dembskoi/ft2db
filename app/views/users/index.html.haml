@@ -1,0 +1,16 @@
+.row
+  .col-md-3
+    %h3 Users
+%br
+.row
+  .col-md-12
+    %table#users_table.table.table-striped
+      %thead
+        %tr
+          %th Email
+          %th Role
+          %th.text-right Actions
+      %tbody
+        - @users.each do |user|
+          %tr
+            = render user

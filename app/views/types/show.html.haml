@@ -1,0 +1,21 @@
+.row
+  .col-md-3
+    %h3= 'Type id: ' + @type.id.to_s
+  .col-md-9
+    %br
+    .pull-right.btn-toolbar
+      = link_to 'Edit', edit_type_path(@type), class: 'btn btn-success' if policy(@type).edit?
+      = link_to 'Delete', type_path(@type), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' if policy(@type).destroy?
+
+%br
+
+- type_attributes.each do |key, value|
+  .row.padding_after
+    .col-md-2
+      %strong= key + ':'
+    .col-md-10
+      = value
+
+%br
+
+= link_to 'Back', types_path, class: 'btn btn-info'

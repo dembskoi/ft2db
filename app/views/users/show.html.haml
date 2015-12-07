@@ -1,0 +1,16 @@
+.row
+  .col-md-3
+    %h3= 'User id: ' + @user.id.to_s
+
+%br
+
+- user_attributes.each do |key, value|
+  .row.padding_after
+    .col-md-2
+      %strong= key + ':'
+    .col-md-10
+      = value
+
+%br
+
+= link_to 'Back', users_path, class: 'btn btn-info'

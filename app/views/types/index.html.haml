@@ -1,0 +1,19 @@
+.row
+  .col-md-3
+    %h3 Types
+  .col-md-9
+    %br
+    .pull-right
+      = link_to 'Add type', new_type_path, class: 'btn btn-success' if policy(:type).new?
+%br
+.row
+  .col-md-12
+    %table#types_table.table.table-striped
+      %thead
+        %tr
+          %th Name
+          %th.text-right Actions
+      %tbody
+        - @types.each do |type|
+          %tr
+            = render type
