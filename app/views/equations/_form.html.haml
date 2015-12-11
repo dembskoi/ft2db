@@ -1,0 +1,6 @@
+= bootstrap_form_for(@equation, layout: :horizontal, label_col: 'col-md-3', control_col: 'col-md-4') do |f|
+  = f.file_field :equ, label: 'Select the equation file'
+
+  .btn-toolbar
+    = link_to 'Back', equations_path, class: 'btn btn-info'
+    = f.submit 'Save', class: 'btn btn-success'

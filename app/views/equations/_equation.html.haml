@@ -1,0 +1,5 @@
+%td= link_to equation.equ_identifier, equation
+%td.text-right
+  = link_to '', equation_path(equation), class: 'btn btn-xs btn-default glyphicon glyphicon-eye-open', title: 'Show'
+  = link_to '', download_equation_path(equation), class: 'btn btn-xs btn-default glyphicon glyphicon-floppy-disk', title: 'Download'
+  = link_to('', equation_path(equation), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-xs btn-danger glyphicon glyphicon-remove', title: 'Delete')

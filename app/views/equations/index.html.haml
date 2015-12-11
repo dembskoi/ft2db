@@ -1,0 +1,19 @@
+.row
+  .col-md-3
+    %h3 Equations
+  .col-md-9
+    %br
+    .pull-right
+      = link_to 'Add equation', new_equation_path, class: 'btn btn-success' if policy(:equation).new?
+%br
+.row
+  .col-md-12
+    %table#equations_table.table.table-striped
+      %thead
+        %tr
+          %th Equation Name
+          %th.text-right Actions
+      %tbody
+        - @equations.each do |equation|
+          %tr
+            = render equation
