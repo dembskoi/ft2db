@@ -14,7 +14,7 @@ set :format, :pretty
 set :log_level, :debug
 
 set :linked_files, %w(config/database.yml .env)
-set :linked_dirs, %w(log tmp/pids tmp/sockets vendor/bundle public/assets)
+set :linked_dirs, %w(log tmp/pids tmp/sockets vendor/bundle public/assets public/uploads)
 
 set :keep_releases, 4
 

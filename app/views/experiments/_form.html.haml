@@ -1,0 +1,6 @@
+= bootstrap_form_for(@experiment, layout: :horizontal, label_col: 'col-md-3', control_col: 'col-md-4') do |f|
+  = f.file_field :exp, label: 'Select the experiment file'
+
+  .btn-toolbar
+    = link_to 'Back', experiments_path, class: 'btn btn-info'
+    = f.submit 'Save', class: 'btn btn-success'

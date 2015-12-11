@@ -1,0 +1,19 @@
+.row
+  .col-md-3
+    %h3 Experiments
+  .col-md-9
+    %br
+    .pull-right
+      = link_to 'Add experiment', new_experiment_path, class: 'btn btn-success' if policy(:experiment).new?
+%br
+.row
+  .col-md-12
+    %table#experiments_table.table.table-striped
+      %thead
+        %tr
+          %th Experiment Name
+          %th.text-right Actions
+      %tbody
+        - @experiments.each do |experiment|
+          %tr
+            = render experiment

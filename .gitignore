@@ -84,3 +84,4 @@ pickle-email-*.html
 *~
 .env
 database.yml
+public/uploads/*

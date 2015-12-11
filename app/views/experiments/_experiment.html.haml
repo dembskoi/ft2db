@@ -1,0 +1,5 @@
+%td= link_to experiment.exp_identifier, experiment
+%td.text-right
+  = link_to '', experiment_path(experiment), class: 'btn btn-xs btn-default glyphicon glyphicon-eye-open', title: 'Show'
+  = link_to '', download_experiment_path(experiment), class: 'btn btn-xs btn-default glyphicon glyphicon-floppy-disk', title: 'Download'
+  = link_to('', experiment_path(experiment), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-xs btn-danger glyphicon glyphicon-remove', title: 'Delete')

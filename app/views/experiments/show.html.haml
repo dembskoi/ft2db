@@ -1,0 +1,20 @@
+.row
+  .col-md-3
+    %h3= 'Experiment id: ' + @experiment.id.to_s
+  .col-md-9
+    %br
+    .pull-right.btn-toolbar
+      = link_to 'Delete', experiment_path(@experiment), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' if policy(@experiment).destroy?
+
+%br
+
+- experiment_attributes.each do |key, value|
+  .row.padding_after
+    .col-md-2
+      %strong= key + ':'
+    .col-md-10
+      = value
+
+%br
+
+= link_to 'Back', experiments_path, class: 'btn btn-info'
