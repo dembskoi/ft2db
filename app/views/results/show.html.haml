@@ -1,0 +1,20 @@
+.row
+  .col-md-3
+    %h3= 'Result id: ' + @result.id.to_s
+  .col-md-9
+    %br
+    .pull-right.btn-toolbar
+      = link_to 'Delete', result_path(@result), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' if policy(@result).destroy?
+
+%br
+
+- result_attributes.each do |key, value|
+  .row.padding_after
+    .col-md-2
+      %strong= key + ':'
+    .col-md-10
+      = value
+
+%br
+
+= link_to 'Back', results_path, class: 'btn btn-info'

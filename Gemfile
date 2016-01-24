@@ -19,7 +19,7 @@ gem 'dotenv', require: false
 gem 'sidekiq'
 gem 'airbrake', '~> 4.3.0'
 gem 'jquery-datatables-rails', '~> 3.3.0'
-gem 'carrierwave'
+gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
 
 group :development do
   gem 'better_errors'

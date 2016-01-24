@@ -1,0 +1,17 @@
+= bootstrap_form_for(@result, layout: :horizontal, label_col: 'col-md-3', control_col: 'col-md-4') do |f|
+  - if f.object && f.object.errors.any?
+    .alert.alert-danger
+      %a.close{"data-dismiss" => "alert"} ×
+      %ul
+        - f.object.errors.full_messages.each do |msg|
+          = content_tag :li, msg, :id => "error_#{msg}" if msg.is_a?(String)
+
+  = f.file_field :res, label: 'Select the result file'
+  = f.select :gas, options_for_select(Result::GAS, f.object.gas), { label: 'Gas' }
+  = f.select :type_id, options_for_select(Type.by_name_and_id, f.object.type_id), { label: 'Type' }
+  = f.select :equation_id, options_for_select(Equation.by_equ_and_id, f.object.equation_id), { label: 'Equation' }
+  = f.select :experiment_id, options_for_select(Experiment.by_exp_and_id, f.object.experiment_id), { label: 'Experiment' }
+
+  .btn-toolbar
+    = link_to 'Back', results_path, class: 'btn btn-info'
+    = f.submit 'Save', class: 'btn btn-success'

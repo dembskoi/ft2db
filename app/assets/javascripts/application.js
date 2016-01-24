@@ -18,4 +18,4 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-window.setTimeout(function(){ $(".alert .close").click(); }, 3000);
+window.setTimeout(function(){ $(".alert .close").click(); }, 10000);

@@ -1,0 +1,27 @@
+.row
+  .col-md-3
+    %h3 Results
+  .col-md-9
+    %br
+    .pull-right
+      = link_to download_all_results_path(format: :csv), class: 'btn btn-success' do
+        %span.glyphicon.glyphicon-floppy-disk
+        Download all results
+      = link_to 'Add result', new_result_path, class: 'btn btn-success' if policy(:result).new?
+%br
+.row
+  .col-md-12
+    %table#results_table.table.table-striped
+      %thead
+        %tr
+          %th Name
+          %th Time
+          %th Gas
+          %th Type
+          %th Equation
+          %th Experiment
+          %th.text-right Actions
+      %tbody
+        - @results.each do |result|
+          %tr
+            = render result

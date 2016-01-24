@@ -1,0 +1,10 @@
+%td= link_to result.name, result
+%td= result.time
+%td= result.gas
+%td= link_to result.type.name, result.type
+%td= result.equation ? link_to(result.equation.equ_identifier, result.equation) : ''
+%td= result.experiment ? link_to(result.experiment.exp_identifier, result.experiment) : ''
+%td.text-right
+  = link_to '', result_path(result), class: 'btn btn-xs btn-default glyphicon glyphicon-eye-open', title: 'Show'
+  = link_to '', download_result_path(result, format: :csv), class: 'btn btn-xs btn-default glyphicon glyphicon-floppy-disk', title: 'Download'
+  = link_to('', result_path(result), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-xs btn-danger glyphicon glyphicon-remove', title: 'Delete')
