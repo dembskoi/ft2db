@@ -35,10 +35,10 @@ class ResultPolicy
   end
 
   def download?
-    @current_user.admin? || @current_user.user?
+    true
   end
 
   def download_all?
-    @current_user.admin? || @current_user.user?
+    true
   end
 end

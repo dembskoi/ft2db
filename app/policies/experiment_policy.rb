@@ -35,6 +35,6 @@ class ExperimentPolicy
   end
 
   def download?
-    @current_user.admin? || @current_user.user?
+    true
   end
 end
