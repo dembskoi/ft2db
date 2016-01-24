@@ -7,6 +7,7 @@
       = link_to download_all_results_path(format: :csv), class: 'btn btn-success' do
         %span.glyphicon.glyphicon-floppy-disk
         Download all results
+      &nbsp
       = link_to 'Add result', new_result_path, class: 'btn btn-success' if policy(:result).new?
 %br
 .row
