@@ -11,28 +11,12 @@ class Result < ActiveRecord::Base
   MAX_FILE_LENGTH = 48
   COLUMN_NAMES = %w(standard_data scalar_data vector_data)
 
-  validates_inclusion_of :gas, in: GAS
-  validates_presence_of :name, :time, :gas, :type_id, :standard_data, :scalar_data, :vector_data
+  validates_inclusion_of :gas, in: GAS, on: :create
+  validates_presence_of :name, :time, :gas, :type_id, :standard_data, :scalar_data, :vector_data, on: :create
 
-  before_validation :validate_file_length, :parse_input_file
-  before_save :update_if_exists
-
-  def self.to_csv
-    CSV.generate do |csv|
-      csv << COLUMN_NAMES
-      all.each do |item|
-        csv << item.attributes.values_at(*COLUMN_NAMES)
-      end
-    end
-  end
-
-  def to_csv
-    CSV.generate do |csv|
-      csv << COLUMN_NAMES
-      csv << attributes.values_at(*COLUMN_NAMES)
-    end
-  end
-
+  before_validation :validate_file_length, :parse_input_file, on: :create, if: 'res.present?'
+  before_create :update_if_exists, if: 'res.present?'
+  
   private
 
   def validate_file_length
@@ -96,9 +80,12 @@ class Result < ActiveRecord::Base
     old_result = Result.find_by(name: name, time: time)
 
     if old_result.present?
-      old_result.standard_data.merge(standard_data)
-      old_result.scalar_data.merge(scalar_data)
-      old_result.vector_data.merge(vector_data)
+      old_result.standard_data = old_result.standard_data.merge(standard_data)
+      old_result.scalar_data = old_result.scalar_data.merge(scalar_data)
+      old_result.vector_data = old_result.vector_data.merge(vector_data)
+      old_result.save
+      ActiveRecord::Base.connection.execute('COMMIT')
+
       false
     end
   end

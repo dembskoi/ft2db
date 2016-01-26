@@ -76,3 +76,8 @@ section {
   @extend .btn-primary;
   @extend .btn-xs;
 }
+#vector.table > thead > tr > th, #vector.table > thead > tr > td,
+#vector.table > tbody > tr > th, #vector.table > tbody > tr > td,
+#vector.table > tfoot > tr > th, #vector.table > tfoot > tr > td {
+  padding: 3px;
+}

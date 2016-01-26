@@ -15,6 +15,39 @@
     .col-md-10
       = value
 
+.row.padding_after
+  .col-md-2
+    %strong Standard Data:
+  .col-md-10
+    = standard_data.html_safe
+
+.row.padding_after
+  .col-md-10.col-md-offset-2
+    %table.table.table-striped
+      %thead
+        %tr
+          - @result.scalar_data.keys.each do |key|
+            %th= key
+      %tbody
+        %tr
+          - @result.scalar_data.values.each do |val|
+            %td= val.first
+
+.row.padding_after
+  .col-md-10.col-md-offset-2
+    %table#vector.table.table-striped
+      %thead
+        %tr
+          - @result.vector_data.keys.each do |key|
+            %th= key
+      %tbody
+        - width = @result.vector_data.values.count
+        - length = @result.vector_data.values.first.count
+        - for i in 0...length
+          %tr
+            - for j in 0...width
+              %td= @result.vector_data.values[j][i]
+
 %br
 
 = link_to 'Back', results_path, class: 'btn btn-info'

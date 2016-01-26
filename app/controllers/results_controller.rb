@@ -41,9 +41,8 @@ class ResultsController < ApplicationController
   def download
     authorize @result
     respond_to do |format|
-      format.csv do
-        send_data @result.to_csv, type: 'text/csv; charset=utf-8; header=present',
-                                  disposition: 'attachment', filename: "#{@result.name}.csv"
+      format.json do
+        send_data render_to_string, type: :json, disposition: 'attachment', filename: "#{@result.name}.json"
       end
     end
   end
@@ -51,9 +50,8 @@ class ResultsController < ApplicationController
   def download_all
     authorize Result
     respond_to do |format|
-      format.csv do
-        send_data Result.to_csv, type: 'text/csv; charset=utf-8; header=present',
-                  disposition: 'attachment', filename: "all_results_#{Time.now.iso8601}.csv"
+      format.json do
+        send_data render_to_string, type: :json, disposition: 'attachment', filename: "all_results_#{Time.now.iso8601}.json"
       end
     end
   end

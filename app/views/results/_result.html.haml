@@ -6,5 +6,5 @@
 %td= result.experiment ? link_to(result.experiment.exp_identifier, result.experiment) : ''
 %td.text-right
   = link_to '', result_path(result), class: 'btn btn-xs btn-default glyphicon glyphicon-eye-open', title: 'Show'
-  = link_to '', download_result_path(result, format: :csv), class: 'btn btn-xs btn-default glyphicon glyphicon-floppy-disk', title: 'Download'
+  = link_to '', download_result_path(result, format: :json), class: 'btn btn-xs btn-default glyphicon glyphicon-floppy-disk', title: 'Download'
   = link_to('', result_path(result), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-xs btn-danger glyphicon glyphicon-remove', title: 'Delete')
