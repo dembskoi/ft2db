@@ -2,6 +2,7 @@
   - if current_user.try(:admin?)
     = menu_item 'Users', users_path
 
+  = menu_item 'README', readme_path
   = menu_item 'Edit account', edit_user_registration_path
   %li= link_to 'Sign out', destroy_user_session_path, method: 'delete'
 - else

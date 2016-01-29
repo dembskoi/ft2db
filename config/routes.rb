@@ -14,6 +14,7 @@ Rails.application.routes.draw do
       get :download_all
     end
   end
+  get 'readme' => 'readme#readme'
 
   root to: 'results#index'
 end
