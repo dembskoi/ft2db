@@ -1,0 +1,21 @@
+.row
+  .col-md-3
+    %h3= 'Gas id: ' + @gas.id.to_s
+  .col-md-9
+    %br
+    .pull-right.btn-toolbar
+      = link_to 'Edit', edit_gas_path(@gas), class: 'btn btn-success' if policy(@gas).edit?
+      = link_to 'Delete', gas_path(@gas), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' if policy(@gas).destroy?
+
+%br
+
+- gas_attributes.each do |key, value|
+  .row.padding_after
+    .col-md-2
+      %strong= key + ':'
+    .col-md-10
+      = value
+
+%br
+
+= link_to 'Back', gases_path, class: 'btn btn-info'

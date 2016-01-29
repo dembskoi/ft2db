@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151212123005) do
+ActiveRecord::Schema.define(version: 20160129190058) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,11 +28,16 @@ ActiveRecord::Schema.define(version: 20151212123005) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "gases", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "results", force: :cascade do |t|
     t.string   "res",                        null: false
     t.string   "name",                       null: false
     t.string   "time",                       null: false
-    t.string   "gas",                        null: false
     t.json     "standard_data", default: {}, null: false
     t.json     "scalar_data",   default: {}, null: false
     t.json     "vector_data",   default: {}, null: false
@@ -41,10 +46,12 @@ ActiveRecord::Schema.define(version: 20151212123005) do
     t.integer  "experiment_id"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+    t.integer  "gas_id",                     null: false
   end
 
   add_index "results", ["equation_id"], name: "index_results_on_equation_id", using: :btree
   add_index "results", ["experiment_id"], name: "index_results_on_experiment_id", using: :btree
+  add_index "results", ["gas_id"], name: "index_results_on_gas_id", using: :btree
   add_index "results", ["name", "time"], name: "index_results_on_name_and_time", unique: true, using: :btree
   add_index "results", ["type_id"], name: "index_results_on_type_id", using: :btree
 

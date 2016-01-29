@@ -1,0 +1,5 @@
+%td= link_to gas.name, gas
+%td.text-right
+  = link_to '', gas_path(gas), class: 'btn btn-xs btn-default glyphicon glyphicon-eye-open', title: 'Show'
+  = link_to '', edit_gas_path(gas), class: 'btn btn-xs btn-default glyphicon glyphicon-pencil', title: 'Edit' if policy(:gas).edit?
+  = link_to '', gas_path(gas), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-xs btn-danger glyphicon glyphicon-remove', title: 'Delete' if policy(:gas).destroy?

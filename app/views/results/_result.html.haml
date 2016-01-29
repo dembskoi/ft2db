@@ -1,6 +1,6 @@
 %td= link_to result.name, result
 %td= result.time
-%td= result.gas
+%td= link_to result.gas.name, result.gas
 %td= link_to result.type.name, result.type
 %td= result.equation ? link_to(result.equation.equ_identifier, result.equation) : ''
 %td= result.experiment ? link_to(result.experiment.exp_identifier, result.experiment) : ''

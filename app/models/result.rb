@@ -3,16 +3,15 @@ require 'csv'
 class Result < ActiveRecord::Base
   mount_uploader :res, ResultUploader
 
+  belongs_to :gas
   belongs_to :type
   belongs_to :equation
   belongs_to :experiment
 
-  GAS = %w(H D He DHe HHe)
   MAX_FILE_LENGTH = 48
   COLUMN_NAMES = %w(standard_data scalar_data vector_data)
 
-  validates_inclusion_of :gas, in: GAS, on: :create
-  validates_presence_of :name, :time, :gas, :type_id, :standard_data, :scalar_data, :vector_data, on: :create
+  validates_presence_of :name, :time, :gas_id, :type_id, :standard_data, :scalar_data, :vector_data, on: :create
 
   before_validation :validate_file_length, :parse_input_file, on: :create, if: 'res.present?'
   before_create :update_if_exists, if: 'res.present?'

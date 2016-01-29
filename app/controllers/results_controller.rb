@@ -63,6 +63,6 @@ class ResultsController < ApplicationController
   end
 
   def result_params
-    params.require(:result).permit(:res, :gas, :type_id, :equation_id, :experiment_id)
+    params.require(:result).permit(:res, :gas_id, :type_id, :equation_id, :experiment_id)
   end
 end

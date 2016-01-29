@@ -1,0 +1,6 @@
+= bootstrap_form_for(@gas, layout: :horizontal, label_col: 'col-md-2', control_col: 'col-md-5') do |f|
+  = f.text_field :name, label: 'Name'
+
+  .btn-toolbar
+    = link_to 'Back', gases_path, class: 'btn btn-info'
+    = f.submit 'Save', class: 'btn btn-success'

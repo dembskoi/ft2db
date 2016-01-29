@@ -7,7 +7,7 @@
           = content_tag :li, msg, :id => "error_#{msg}" if msg.is_a?(String)
 
   = f.file_field :res, label: 'Select the result file'
-  = f.select :gas, options_for_select(Result::GAS, f.object.gas), { label: 'Gas' }
+  = f.select :gas_id, options_for_select(Gas.by_name_and_id, f.object.gas_id), { label: 'Gas' }
   = f.select :type_id, options_for_select(Type.by_name_and_id, f.object.type_id), { label: 'Type' }
   = f.select :equation_id, options_for_select(Equation.by_equ_and_id, f.object.equation_id), { label: 'Equation' }
   = f.select :experiment_id, options_for_select(Experiment.by_exp_and_id, f.object.experiment_id), { label: 'Experiment' }

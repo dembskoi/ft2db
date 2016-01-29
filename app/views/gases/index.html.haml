@@ -1,0 +1,19 @@
+.row
+  .col-md-3
+    %h3 Gases
+  .col-md-9
+    %br
+    .pull-right
+      = link_to 'Add gas', new_gas_path, class: 'btn btn-success' if policy(:gas).new?
+%br
+.row
+  .col-md-12
+    %table#gases_table.table.table-striped
+      %thead
+        %tr
+          %th Name
+          %th.text-right Actions
+      %tbody
+        - @gases.each do |gas|
+          %tr
+            = render gas

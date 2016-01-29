@@ -9,3 +9,4 @@ user = CreateAdminService.new.call
 puts 'CREATED ADMIN USER: ' << user.email
 
 %w(OH LHCD CRU RAE).each { |type| Type.create!(name: type) }
+%w(H D He DHe HHe).each { |gas| Gas.create!(name: gas) }
