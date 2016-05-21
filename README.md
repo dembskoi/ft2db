@@ -5,8 +5,8 @@ Ft2db is a database of Ft-2 tokamak experimental data that was produced by ASTRA
 
 Documentation and Support
 -------------------------
-In the database there are objects named "\<name>_\<time>" for example: 140609ss\_0.028 
-That usually means that the experiment was made 09 June 1014, the time of experimental data is 28ms and ss means Steady State. 
+In the database there are objects named "\<name>_\<time>" for example: 140609ss\_0.028 , that usually means 
+that the experiment was made 09 June 2014, the time of experimental data is 28ms and ss means Steady State. 
 
 More information about specific experiment could be found in uniq experiment file that is available by link.
 Equation files are available too. So you could repeat all the simulation with your own ASTRA code. Except there might be no additional modules in pure ASTRA. 
@@ -19,7 +19,7 @@ Data dimensions and meanings
 
 
 * __Name__ name of dataset
-* __Time__ time in s
+* __Time__ time in seconds
 * __Gas__ gas of the experiment
 * __Type__ experiment time
 * __Equation__ name of equ file
@@ -88,7 +88,7 @@ __Vector data__
 |	**grti**	|	*-keV/m*	|	ion temperature gradient	|
 |	**vpoh**	|	*MW*	|	volume integral of an ohmic power	|
 |	**qi**	|	*MW*	|	ion energy flux	|
-|	**cc**	|	*(µOhm*m)^-1 or MS/m*	|	conductivity	|
+|	**cc**	| *(µOhm*m)^-1 or MS/m* 	|	conductivity	|
 |	**grne**	|	*-1\*10^19 m^-4*	|	electron density gradient	|
 |	**vpei**	|	*MW*	|	volume integral of a Peic	|
 |	**zef**	|	*1*	|	effective charge	|
@@ -98,7 +98,7 @@ __Vector data__
 Data Parsing
 ------------
 
-There are some Python parsers of JSON file that may help with analyzing data: switching str from DB to float, 
+There are some Python parsers of JSON files that may help with analyzing data: switching str from DB to float, 
 finding specific experiments, printing specific data, averaging and so on.   
 
 > https://github.com/arentij/ft2db
