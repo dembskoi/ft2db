@@ -26,7 +26,7 @@ Data dimensions and meanings
 * __Experiment__ name of exp file
 
 
-* __Standard data__
+__Standard data__
 | Data        | Dimension           | Description  |
 | ------------- |:-------------:| -----:|
 |	**r**	|	*m*	|	major radius	|
@@ -38,7 +38,8 @@ Data dimensions and meanings
 |	**dt**	|	*ms*	|	time step in ASTRA modelling	|
 
 
-* __Scalar data__
+__Scalar data__
+
 | Data        | Dimension           | Description  |
 | ------------- |:-------------:| -----:|
 | **time**|	*s*|	current time|
@@ -56,7 +57,8 @@ Data dimensions and meanings
 
 
 
-* __Vector data__
+__Vector data__
+
 | Data        | Dimension           | Description  |
 | ------------- |:-------------:| -----:|
 |	**a**	|	*m*	|	radius	|
