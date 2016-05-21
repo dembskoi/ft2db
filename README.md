@@ -18,7 +18,7 @@ Data dimensions and meanings
 -------------
 
 
-* __Name__ name of data
+* __Name__ name of dataset
 * __Time__ time in s
 * __Gas__ gas of the experiment
 * __Type__ experiment time
@@ -27,6 +27,7 @@ Data dimensions and meanings
 
 
 __Standard data__
+
 | Data        | Dimension           | Description  |
 | ------------- |:-------------:| -----:|
 |	**r**	|	*m*	|	major radius	|
