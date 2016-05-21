@@ -12,7 +12,7 @@ Contributing
 Credits
 -------
 
-Artur Perevalov arentij@gmail.com
+Artur Perevalov artur.perevalov@gmail.com
 
 License
 -------
