@@ -1,7 +1,9 @@
 Ft2db
 ================
 
-Ft2db is a database of Ft-2 tokamak experimental data that was produced by ASTRA code simulations of discharges
+Ft2db is a database of Ft-2 tokamak experimental data that was produced by ASTRA code 
+(Automated System for TRansport Analysis). 
+FT-2 tokamak is situated in St.Petersburg Russia in the Ioffe Institute 
 
 Documentation and Support
 -------------------------
@@ -11,7 +13,7 @@ that the experiment was made 09 June 2014, the time of experimental data is 28ms
 More information about specific experiment could be found in uniq experiment file that is available by link.
 Equation files are available too. So you could repeat all the simulation with your own ASTRA code. Except there might be no additional modules in pure ASTRA. 
 
-It's possible to download all database as a JSON file and work with it more precise. Additional information about it in "Data Parsing" 
+It's possible to download all database as a JSON file and work with it more precise. Additional information about it in "Data Parsing" section.
 
 
 Data dimensions and meanings
@@ -21,9 +23,10 @@ Data dimensions and meanings
 * __Name__ name of dataset
 * __Time__ time in seconds
 * __Gas__ gas of the experiment
-* __Type__ experiment time
+* __Type__ experiment type
 * __Equation__ name of equ file
 * __Experiment__ name of exp file
+
 
 
 __Standard data__
@@ -94,6 +97,9 @@ __Vector data__
 |	**zef**	|	*1*	|	effective charge	|
 |	**j**	|	*A/m^2*	|	current density	|
 
+More information could be found in the ASTRA manual by checking names in output of equation files    
+
+> http://w3.pppl.gov/~hammett/work/2009/Astra_ocr.pdf
 
 Data Parsing
 ------------
@@ -124,4 +130,4 @@ License
 -------
 
 All rights reserved
-
+2016
