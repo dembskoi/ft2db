@@ -57,6 +57,8 @@ __Scalar data__
 | **tna**|	*ms*|	NeoAlcator taue scaling|
 | **tgo**|	*ms*|	Goldstone taue scaling|
 | **q.95**|	*1*|	safety factor at r\*95%|
+| **nnn**|	*1*|	nn(a)/nn(0) |
+| **Tnb**|	*eV*|	neutrals temperature on the edge |
 | **ne0**|	*10^19 m^-3*|	electron density in center| 
 
 
@@ -72,7 +74,7 @@ __Vector data__
 |	**prad**	|	*MW/m^3*	|	Radiation power	|
 |	**ne**	|	*10^19 m^-3*	|	electron density	|
 |	**q**	|	*1*	|	safety factor	|
-|	**volu**	| *M^3*	|	Plasma volume inside this radius	|
+|	**volu**	| *m^3*	|	Plasma volume inside this radius	|
 |	**poh**	|	*MW/m^3*	|	Power of Ohmic Heating	|
 |	**ti**	|	*keV*	|	ion temperature	|
 |	**shea**	|	*1*	|	magnetic shear	|
@@ -91,11 +93,17 @@ __Vector data__
 |	**grti**	|	*-keV/m*	|	ion temperature gradient	|
 |	**vpoh**	|	*MW*	|	volume integral of an ohmic power	|
 |	**qi**	|	*MW*	|	ion energy flux	|
-|	**cc**	| *(µOhm*m)^-1 or MS/m* 	|	conductivity	|
-|	**grne**	|	*-1\*10^19 m^-4*	|	electron density gradient	|
+|	**cc**	| *(µOhm m)^-1 or MS/m* 	|	conductivity	|
+|	**grne**	|	*-1/10^19 m^-4*	|	electron density gradient	|
 |	**vpei**	|	*MW*	|	volume integral of a Peic	|
 |	**zef**	|	*1*	|	effective charge	|
 |	**j**	|	*A/m^2*	|	current density	|
+|	**sn**	|	*10^19 m^-3 s^-1*	|	particle source	|
+|	**hegn**	|	*m^2/s*	|	electron heat conductivity without convection	|
+|	**nn**	|	*10^16 m^-3*	|	neutrals density	|
+|	**tn**	|	*keV*	|	neutrals temperature	|
+|	**dnexp**	|	*m^2/s*	|	electron diffusion coefficient	|
+
 
 More information could be found in the ASTRA manual by checking names in output of equation files    
 
