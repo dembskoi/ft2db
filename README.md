@@ -57,7 +57,7 @@ __Scalar data__
 | **tna**|	*ms*|	NeoAlcator taue scaling|
 | **tgo**|	*ms*|	Goldstone taue scaling|
 | **q.95**|	*1*|	safety factor at r\*95%|
-| **nnn**|	*1*|	nn(a)//nn(0) |
+| **nnn**|	*1*|	nn(a)/nn(0) |
 | **Tnb**|	*eV*|	neutrals temperature on the edge |
 | **ne0**|	*10^19 m^-3*|	electron density in center| 
 
@@ -70,16 +70,16 @@ __Vector data__
 |	**a**	|	*m*	|	radius	|
 |	**te**	|	*keV*	|	electron temperature	|
 |	**shif**	|	*m*	|	Shafranov shift	|
-|	**heef**	|	*m^2//s*	|	Effective electron heat conductivity	|
+|	**heef**	|	*m^2/s*	|	Effective electron heat conductivity	|
 |	**prad**	|	*MW/m^3*	|	Radiation power	|
 |	**ne**	|	*10^19 m^-3*	|	electron density	|
 |	**q**	|	*1*	|	safety factor	|
 |	**volu**	| *m^3*	|	Plasma volume inside this radius	|
-|	**poh**	|	*MW//m^3*	|	Power of Ohmic Heating	|
+|	**poh**	|	*MW/m^3*	|	Power of Ohmic Heating	|
 |	**ti**	|	*keV*	|	ion temperature	|
 |	**shea**	|	*1*	|	magnetic shear	|
-|	**xief**	|	*m^2//s*	|	Effective ion heat conductivity	|
-|	**peic**	|	*MW//m^3*	|	Electron ion heat exchange due to Coulomb collisions	|
+|	**xief**	|	*m^2/s*	|	Effective ion heat conductivity	|
+|	**peic**	|	*MW/m^3*	|	Electron ion heat exchange due to Coulomb collisions	|
 |	**ni**	|	*10^19 cm^-3*	|	ion density	|
 |	**rho**	|	*m*	|	main magnetic surface label	|
 |	**slat**	|	*M^2*	|	Toroidal surface area	|
@@ -93,16 +93,16 @@ __Vector data__
 |	**grti**	|	*-keV/m*	|	ion temperature gradient	|
 |	**vpoh**	|	*MW*	|	volume integral of an ohmic power	|
 |	**qi**	|	*MW*	|	ion energy flux	|
-|	**cc**	| *(µOhm*m)^-1 or MS//m* 	|	conductivity	|
+|	**cc**	| *(µOhm*m)^-1 or MS/m* 	|	conductivity	|
 |	**grne**	|	*-1\*10^19 m^-4*	|	electron density gradient	|
 |	**vpei**	|	*MW*	|	volume integral of a Peic	|
 |	**zef**	|	*1*	|	effective charge	|
 |	**j**	|	*A/m^2*	|	current density	|
 |	**sn**	|	*10^19 m^-3 s^-1*	|	particle source	|
-|	**hegn**	|	*m^2//s*	|	electron heat conductivity without convection	|
+|	**hegn**	|	*m^2/s*	|	electron heat conductivity without convection	|
 |	**nn**	|	*10^16 m^-3*	|	neutrals density	|
 |	**tn**	|	*keV*	|	neutrals temperature	|
-|	**dnexp**	|	*m^2//s*	|	electron diffusion coefficient	|
+|	**dnexp**	|	*m^2/s*	|	electron diffusion coefficient	|
 
 
 More information could be found in the ASTRA manual by checking names in output of equation files    
