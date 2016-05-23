@@ -93,8 +93,8 @@ __Vector data__
 |	**grti**	|	*-keV/m*	|	ion temperature gradient	|
 |	**vpoh**	|	*MW*	|	volume integral of an ohmic power	|
 |	**qi**	|	*MW*	|	ion energy flux	|
-|	**cc**	| *(µOhm*m)^-1 or MS/m* 	|	conductivity	|
-|	**grne**	|	*-1/*10^19 m^-4*	|	electron density gradient	|
+|	**cc**	| *(µOhm m)^-1 or MS/m* 	|	conductivity	|
+|	**grne**	|	*-1/10^19 m^-4*	|	electron density gradient	|
 |	**vpei**	|	*MW*	|	volume integral of a Peic	|
 |	**zef**	|	*1*	|	effective charge	|
 |	**j**	|	*A/m^2*	|	current density	|
