@@ -82,17 +82,18 @@ __Vector data__
 |	**peic**	|	*MW/m^3*	|	Electron ion heat exchange due to Coulomb collisions	|
 |	**ni**	|	*10^19 cm^-3*	|	ion density	|
 |	**rho**	|	*m*	|	main magnetic surface label	|
-|	**slat**	|	*M^2*	|	Toroidal surface area	|
+|	**slat**	|	*m^2*	|	Toroidal surface area	|
 |	**niz1**	|	*10^19 m^-3*	|	impurity density	|
-|	**qe**	|	*MW*	|	electron energy flux	|
+|	**qe**	|	*kW*	|	electron energy flux	|
 |	**upl**	|	*V*	|	toroidal loop voltage	|
 |	**grte**	|	*-keV/m*	|	electron temperature gradient	|
+|	**grpe**	|	*-keV/m^4*	|	electron pressure gradient	|
 |	**vpra**	|	*MW*	|	volume integral of a radiative power	|
 |	**habo**	|	*m^2/s*	|	Heat conductivity Anomalous Bohm	|
 |	**taue**	|	*s*	|	electron energy confinement time inside this radius	|
 |	**grti**	|	*-keV/m*	|	ion temperature gradient	|
 |	**vpoh**	|	*MW*	|	volume integral of an ohmic power	|
-|	**qi**	|	*MW*	|	ion energy flux	|
+|	**qi**	|	*kW*	|	ion energy flux	|
 |	**cc**	| *(µOhm m)^-1 or MS/m* 	|	conductivity	|
 |	**grne**	|	*-1/10^19 m^-4*	|	electron density gradient	|
 |	**vpei**	|	*MW*	|	volume integral of a Peic	|
@@ -102,7 +103,8 @@ __Vector data__
 |	**hegn**	|	*m^2/s*	|	electron heat conductivity without convection	|
 |	**nn**	|	*10^16 m^-3*	|	neutrals density	|
 |	**tn**	|	*keV*	|	neutrals temperature	|
-|	**dnexp**	|	*m^2/s*	|	electron diffusion coefficient	|
+|	**dnex**	|	*m^2/s*	|	electron diffusion coefficient	|
+|	**peto**	|	*MW/m^3*	|	electron heat source	|
 
 
 More information could be found in the ASTRA manual by checking names in output of equation files    
